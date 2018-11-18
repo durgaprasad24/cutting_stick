@@ -1,0 +1,36 @@
+public class duplicate
+{
+ public static void main(String []args)
+{
+
+  int[] a = new int[] { 1,1,2,3 };
+            
+            int d = 1;
+            int n=a.Length;
+            int f = 0;
+            do
+            {
+                int c = 0, s = 99;
+                f = 0;
+                for (int i = 0; i < n; i++)
+                {
+                    if (a[i] > 0 && a[i] < s)
+                    {
+                        s = a[i];
+                    }
+                }
+                for (int i = 0; i < n; i++)
+                {
+                    if (a[i] != 0)
+                    {
+                        a[i] = a[i] - s;
+                        c++;
+                        f = 1;
+                    }
+                }
+                 if(c>0)
+                    System.out.println(c);
+            } while (f == 1);
+            
+}
+}
